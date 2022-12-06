@@ -1,0 +1,26 @@
+Searching 125 files for ":get"
+
+~/first/app/views/sellers/Find Results:
+   22    107  
+   23    108    # This setting changes the http method used when rendering the
+   24:   109:   # link. For example :get, :delete, :put, etc..
+   25    110    #
+   26    111    # Default:
+   ..
+   30    268  
+   31    269:   # The default HTTP method used to sign out a resource. Default is :delete.
+   32:   270:   config.sign_out_via = :get
+   33    271  
+   34    272    # ==> OmniAuth
+
+~/first/config/initializers/active_admin.rb:
+  107  
+  108    # This setting changes the http method used when rendering the
+  109:   # link. For example :get, :delete, :put, etc..
+  110    #
+  111    # Default:
+  112:   # config.logout_link_method = :delete
+  113  
+  114    # == Root
+
+4 matches across 2 files

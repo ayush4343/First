@@ -1,0 +1,57 @@
+Searching 125 files for ":delete"
+
+~/first/app/views/products/index.html.erb:
+   26  			<%= link_to "edit",   edit_product_path(product) , class:"btn btn-warning"%>
+   27  			<%= link_to "Destroy", product, class:"btn btn-warning",data: {
+   28: 			                    turbo_method: :delete,
+   29  			                    turbo_confirm: "Are you sure?"
+   30  			                  } %> 
+
+~/first/app/views/products/show.html.erb:
+   21  
+   22  <%= link_to "Destroy product", @product, class:"btn btn-info" ,data: {
+   23:                     turbo_method: :delete,
+   24                      turbo_confirm: "Are you sure?"
+   25                    } %>
+
+~/first/app/views/sellers/Find Results:
+    4     22    107  
+    5     23    108    # This setting changes the http method used when rendering the
+    6:    24:   109:   # link. For example :get, :delete, :put, etc..
+    7     25    110    #
+    8     26    111    # Default:
+    9     ..
+   10     30    268  
+   11:    31    269:   # The default HTTP method used to sign out a resource. Default is :delete.
+   12     32:   270:   config.sign_out_via = :get
+   13     33    271  
+   ..
+   17    107  
+   18    108    # This setting changes the http method used when rendering the
+   19:   109:   # link. For example :get, :delete, :put, etc..
+   20    110    #
+   21    111    # Default:
+   22:   112:   # config.logout_link_method = :delete
+   23    113  
+   24    114    # == Root
+
+~/first/app/views/sellers/index.html.erb:
+    1  <h1>Welcome to seller panel</h1>
+    2: <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
+~/first/config/initializers/active_admin.rb:
+  107  
+  108    # This setting changes the http method used when rendering the
+  109:   # link. For example :get, :delete, :put, etc..
+  110    #
+  111    # Default:
+
+~/first/config/initializers/devise.rb:
+  267    # config.navigational_formats = ['*/*', :html]
+  268  
+  269:   # The default HTTP method used to sign out a resource. Default is :delete.
+  270:   config.sign_out_via = :delete
+  271  
+  272    # ==> OmniAuth
+
+10 matches across 6 files

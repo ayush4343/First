@@ -1,0 +1,80 @@
+<h1>Create New Seller</h1>
+
+<table>
+
+<%= form_with model: @seller do |form| %>
+
+	<tr>
+		<td><%= form.label :name %></td>
+		<td><%= form.text_field :name %></td>
+		<% @seller.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+	<tr>
+		<td><%= form.label :personal_email %></td>
+		<td><%= form.email_field :personal_email%></td>
+		<% @seller.errors.full_messages_for(:personal_email).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+	<tr>
+		<td><%= form.label :aadhar_no %></td>
+		<td><%= form.number_field :aadhar_no %></td>
+		<% @seller.errors.full_messages_for(:aadhar_no).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+	<tr>
+		<td><%= form.label :contact_no %></td>
+		<td><%= form.number_field :contact_no %></td>
+		<% @seller.errors.full_messages_for(:contact_no).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+	<tr>
+		<td><%= form.label :pincode %></td>
+		<td><%= form.number_field :pincode %></td>
+		<% @seller.errors.full_messages_for(:pincode).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+	<tr>
+		<td><%= form.label :city %></td>
+		<td><%= form.text_field :city %></td>
+		<% @seller.errors.full_messages_for(:city).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+	<tr>
+		<td><%= form.label :state %></td>
+		<td><%= form.text_field :state %></td>
+		<% @seller.errors.full_messages_for(:state).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+	<tr>
+		<td><%= form.label :country %></td>
+		<td><%= form.text_field :country %></td>
+		<% @seller.errors.full_messages_for(:country).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+	<tr>
+		<td><%= form.label :address %></td>
+		<td><%= form.text_field :address %></td>
+		<% @seller.errors.full_messages_for(:address).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+	<tr>
+		<td><td><%= form.submit %></td>
+	</tr>
+
+<% end %>
+</table>

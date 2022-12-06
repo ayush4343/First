@@ -1,0 +1,23 @@
+
+<div class='container-fluid mt-0px',> 
+ <div class="card" style="width:335px;">
+
+  <div class="card-body">
+    <h5 class="card-title">Product details</h5>
+    <p class="card-text">
+  	
+    <h5><%= @product.name %></h5>
+
+    <h5><%= @product.soap_type %></h5>
+    <h5><%= @product.mfg_date%></h5>
+    <h5><%= @product.exp_date %></h5>
+    <h5><%= @product.category_type %></h5>
+
+    <% if @product.photo.attached? %>
+    <h5><%= image_tag  @product.photo %></h5>
+    <% end %>
+
+
+  </div>
+</div>
+</div>

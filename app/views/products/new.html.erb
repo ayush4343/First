@@ -1,0 +1,62 @@
+<h2>Add Product Here</h2>
+
+<table>
+
+<%= form_with model: @product do |form| %>
+
+	<tr>
+		<td><%= form.label :name %></td>
+		<td><%= form.text_field :name %></td>
+		<% @product.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+	<tr>
+		<td><%= form.label :type %></td>
+		<td><%= form.text_field :soap_type%></td>
+		<% @product.errors.full_messages_for(:soap_type).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+
+	<tr>
+		<td><%= form.label :mfg_date %></td>
+		 
+		<td><%= form.text_field :mfg_date  %></td>
+		<% @product.errors.full_messages_for(:mfg_date).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+	<tr>
+		<td><%= form.label :exp_date %></td>
+		 
+		<td><%= form.text_field :exp_date  %></td>
+		<% @product.errors.full_messages_for(:exp_date).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+	</tr>
+
+
+	<tr>  
+		<td><%= form.label :category_type %></td>
+        <td><%= form.select :category_type, options_for_select(Product.category_types.map {|key, value| [key.titleize, Product.category_types.key(value)]}, @product.category_type) %></td>
+
+
+	</tr>
+
+
+
+	<tr>
+	<td><%= form.label :photo %></td>
+	<td><%= form.file_field :photo %></td>
+	</tr>
+
+	<tr>
+		<td><td><%= form.submit %></td>
+	</tr>
+
+<% end %>
+</table>

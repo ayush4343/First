@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  mfg_date: 2022-12-01
+  exp_date: 2022-12-01
+
+two:
+  name: MyString
+  type: 
+  mfg_date: 2022-12-01
+  exp_date: 2022-12-01

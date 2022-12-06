@@ -1,0 +1,81 @@
+       
+<div class="container-fluid">
+
+	<div class="row row-cols-5">
+
+
+<%# @products.find_each(:category_types) do |products| %>
+
+<% @products.each do |product| %>
+ 
+<div class= "col">
+	<div class="card" style="width: 20rem;">
+  		
+  		<div class="card-body">
+    	   <h5 class="card-title">Product</h5>
+    		<p class="card-text">
+    			
+	    <h6><%= product.name %></h6>
+			<h6><%= product.soap_type %></h6>
+			<h6><%= product.mfg_date %></h6>
+			<h6><%= product.exp_date %></h6>
+			<h6><%= product.category_type %></h6>
+			<% if product.photo.attached? %>
+			<h6><%= image_tag  product.photo %></h6>
+			
+			<% end %>
+
+			<% if can? :read ,product %>
+			<%= link_to "view",  product_path(product) , class:"btn btn-warning" %>
+			<% end %>
+
+			<% if can? :create ,product %>
+			<%= link_to "new", new_product_path ,class:"btn btn-warning" %>
+			<% end %>
+
+			<% if can? :update ,product %>
+			<%= link_to "edit",   edit_product_path(product) , class:"btn btn-warning"%>
+			<% end %>
+
+			<% if can? :destroy ,product %>
+            <%= link_to "Destroy", product_path(product), class:"btn btn-warning",data: {
+                          turbo_method: :delete,
+                          turbo_confirm: "Are you sure?"
+                        } %> 
+            <% end %>
+
+
+    		</p>
+    	   
+  		</div>
+     </div>
+
+		</div>
+
+<% end %>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
