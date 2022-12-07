@@ -3,6 +3,6 @@ class Product < ApplicationRecord
 	belongs_to :user
 
 
-	enum category_type: [:automobile ,:grocery ,:gadgets ,:bags ,:oil, :electric]
+	enum category_type: [:Automobile ,:Grocery ,:Gadgets ,:Bags ,:Oil, :Electric]
 end
 
